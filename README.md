@@ -29,14 +29,16 @@ This project simulates a ride-sharing platform and processes real-time trip data
 
 ###  Install Requirements
 
-```bash
+```
 pip install pyspark faker
 sudo apt install default-jdk -y  # Required for PySpark
-✅ 2. Start the Ride Data Simulator
+2. Start the Ride Data Simulator
 
-python3 simulator.py
+python3 data_generator.py
+
+```
 This will stream fake ride events to localhost:9999.
-
+```
 Task 1: Ingest & Parse Ride Data
 File: task1_ingest_parse.py
 What it does:
@@ -94,7 +96,7 @@ output/task3_windowed_fares/part-*.csv
 
 total_fare,window_start,window_end
 261.70,2025-04-01 17:42:00,2025-04-01 17:43:00
-
+```
 Notes
 CSVs update in real time in the output/ directory
 
@@ -106,7 +108,7 @@ For faster testing, Task 3 uses a short time window (1 minute with 30 sec slides
 
 Run All Tasks Independently
 In different terminals (after running the simulator):
-
+```
 python3 task1_ingest_parse.py
 python3 task2_driver_aggregations.py
 python3 task3_time_window_analysis.py
