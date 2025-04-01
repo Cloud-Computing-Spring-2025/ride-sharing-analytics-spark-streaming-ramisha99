@@ -39,7 +39,7 @@ python3 data_generator.py
 ```
 This will stream fake ride events to localhost:9999.
 ```
-Task 1: Ingest & Parse Ride Data
+###Task 1: Ingest & Parse Ride Data
 File: task1_ingest_parse.py
 What it does:
 Connects to the socket on localhost:9999
@@ -58,7 +58,7 @@ output/task1_parsed_rides/part-*.csv
 trip_id,driver_id,distance_km,fare_amount,timestamp
 bd81f2d1-ae1d-4d1b-9d42-3dcac7c1590f,21,12.5,45.75,2025-04-01 17:43:20
 
-Task 2: Driver-Level Aggregations
+###Task 2: Driver-Level Aggregations
 File: task2_driver_aggregations.py
 What it does:
 Groups data by driver_id and 1-minute time windows
@@ -77,7 +77,7 @@ output/task2_driver_aggregates/part-*.csv
 driver_id,total_fare,avg_distance,window_start,window_end
 32,153.20,12.3,2025-04-01 17:42:00,2025-04-01 17:43:00
 
-Task 3: Time-Windowed Fare Trends
+###Task 3: Time-Windowed Fare Trends
 File: task3_time_window_analysis.py
 
 What it does:
@@ -98,15 +98,16 @@ total_fare,window_start,window_end
 261.70,2025-04-01 17:42:00,2025-04-01 17:43:00
 ```
 Notes
-CSVs update in real time in the output/ directory
+- CSVs update in real time in the output/ directory
 
-Checkpoints are automatically managed in the checkpoints/ folder
+- Checkpoints are automatically managed in the checkpoints/ folder
 
-Make sure the simulator is running before launching any task
+- Make sure the simulator is running before launching any task
 
-For faster testing, Task 3 uses a short time window (1 minute with 30 sec slides)
+- For faster testing, Task 3 uses a short time window (1 minute with 30 sec slides)
 
-Run All Tasks Independently
+-Run All Tasks Independently
+
 In different terminals (after running the simulator):
 ```
 python3 task1_ingest_parse.py
