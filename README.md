@@ -6,11 +6,21 @@ This project simulates a ride-sharing platform and processes real-time trip data
 
 ## Project Structure
 
-. ├── task1_ingest_parse.py # Task 1: Ingest & parse JSON ride data 
+├── task1_ingest_parse.py # Task 1: Ingest & parse JSON ride data 
+
+
 ├── task2_driver_aggregations.py # Task 2: Driver-level fare & distance analysis 
+
+
 ├── task3_time_window_analysis.py # Task 3: Time-windowed fare trend analysis 
+
+
 ├── simulator.py # Simulates real-time ride data on localhost:9999 
+
+
 ├── output/ # Contains CSV results from each task 
+
+
 └── checkpoints/ # Spark streaming checkpoint folders
 
 ---
